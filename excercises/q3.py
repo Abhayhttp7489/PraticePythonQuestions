@@ -1,16 +1,21 @@
-def generate_rectangle(n, m):
+def generate_triangle(n):
     """
-    Function to return a rectangle pattern of '*' with length n and breadth m as a list of strings.
+    Function to return a right-angled triangle of '*' of side n as a list of strings.
 
     Parameters:
-    n (int): The number of rows in the rectangle.
-    m (int): The number of columns in the rectangle.
+    n (int): The height and base of the triangle.
 
     Returns:
-    list: A list of strings where each string represents a row of the rectangle pattern.
+    list: A list of strings where each string represents a row of the triangle.
     """
     # Your code here
+    triangle = []
 
-    return ['*' * m for _ in range(n)]
-print(generate_rectangle(5, 3))
+    for i in range(1, n + 1):
+        triangle.append(i * '*')
+    return triangle
+print(generate_triangle(5))
+
+
+
 
