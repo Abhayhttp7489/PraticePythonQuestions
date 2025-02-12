@@ -1,6 +1,6 @@
-def generate_triangle(n):
+def generate_inverted_triangle(n):
     """
-    Function to return a right-angled triangle of '*' of side n as a list of strings.
+    Function to return an inverted right-angled triangle of '*' of side n as a list of strings.
 
     Parameters:
     n (int): The height and base of the triangle.
@@ -8,14 +8,15 @@ def generate_triangle(n):
     Returns:
     list: A list of strings where each string represents a row of the triangle.
     """
-    # Your code here
-    triangle = []
+    if n <= 0:
+        return []  # Return an empty list for invalid input
 
-    for i in range(1, n + 1):
-        triangle.append(i * '*')
+    triangle = []  # Initialize an empty list to store rows
+
+    for i in range(n, 0, -1):  # Loop from n to 1 (decreasing order)
+        triangle.append('*' * i)  # Each row contains `i` asterisks
+
     return triangle
-print(generate_triangle(5))
 
-
-
-
+# Example usage:
+print("\n".join(generate_inverted_triangle(5)))
