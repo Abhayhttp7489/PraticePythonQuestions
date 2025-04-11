@@ -105,7 +105,5 @@ def reverse_string(s):
     return s[::-1]
 print(list(reverse_string("harsh")))
 
-def remove_duplicates(s):
-    for char in s::
 
 
