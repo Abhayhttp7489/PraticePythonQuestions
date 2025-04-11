@@ -99,5 +99,13 @@ def binary_search(arr, target):
     return -1  
 print(binary_search([1,2,3,4,5,6,7],4))
 
+#17. write a python program to revrse a string - 
+
+def reverse_string(s):
+    return s[::-1]
+print(list(reverse_string("harsh")))
+
+def remove_duplicates(s):
+    for char in s::
 
 
